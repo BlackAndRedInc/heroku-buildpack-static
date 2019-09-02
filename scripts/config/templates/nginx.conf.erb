@@ -44,7 +44,7 @@ http {
     keepalive_timeout 5;
     root <%= root %>;
   <% if error_page %>
-    error_page 404 = 200 /index.html;
+    error_page 404 =200 /index.html;
   <% end %>
   <% if proxies.any? %>
     resolver <%= resolver %>;
