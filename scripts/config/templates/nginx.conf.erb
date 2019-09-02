@@ -44,7 +44,7 @@ http {
     keepalive_timeout 5;
     root <%= root %>;
   <% if error_page %>
-    error_page 404 500  /<%= error_page %>;
+    error_page 404 = 200 /index.html;
   <% end %>
   <% if proxies.any? %>
     resolver <%= resolver %>;
@@ -67,7 +67,7 @@ http {
 
   <% if clean_urls %>
     location ~ \.html$ {
-      try_files $uri $uri/ /index.html;
+      try_files $uri =404;
     }
   <% end %>
 
