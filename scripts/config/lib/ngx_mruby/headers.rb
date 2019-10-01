@@ -1,8 +1,6 @@
 # ghetto require, since mruby doesn't have require
 eval(File.read('/app/bin/config/lib/nginx_config_util.rb'))
 
-require 'json'
-
 USER_CONFIG = "/app/static.json"
 
 config = {}
