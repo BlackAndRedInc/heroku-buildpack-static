@@ -1,3 +1,5 @@
+require 'json'
+
 # ghetto require, since mruby doesn't have require
 eval(File.read('/app/bin/config/lib/nginx_config_util.rb'))
 
